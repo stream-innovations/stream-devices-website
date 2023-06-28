@@ -1,0 +1,60 @@
+---
+import { listProducts } from "@api/product/listProducts";
+import Footer from "@components/Footer.astro";
+import HeroSection from "@section/HeroSection.astro";
+import Navbar from "@components/Navbar.astro";
+import Layout from "@layouts/Layout.astro";
+import ShortIntroSection from "@section/ShortIntroSection.astro";
+import PartnerCompanies from "@section/PartnerCompanies.astro";
+import { pageTitleDesc } from "content";
+import CollectionGroup from "@components/CollectionGroup";
+import { collectionList } from "@api/product/collectionList";
+import ProductContainer from "@components/ProductContainer";
+import Typography from "@components/Typography";
+
+const { collections } = await collectionList();
+const collectionId = collections.find((collection) =>
+  collection.handle?.includes("feature")
+)?.id;
+const res = await listProducts({
+  collection_id: [collectionId || ""],
+  limit: 3,
+});
+const product = res?.products;
+---
+
+<Layout
+  title={pageTitleDesc.home.title}
+  description={pageTitleDesc.home.description}
+>
+  <Navbar />
+  <HeroSection />
+
+  <!-- Featured section -->
+  <ShortIntroSection />
+
+  <!-- Feature Products -->
+  {
+    collectionId ? (
+      <CollectionGroup
+        title={product[0]?.collection?.title}
+        link={`/collection/${product[0]?.collection?.handle}`}
+        linkText="View all products"
+      >
+        <ProductContainer products={product} client:load />
+      </CollectionGroup>
+    ) : (
+      <Typography
+        size="body1/semi-bold"
+        variant="secondary"
+        className="text-center py-10"
+      >
+        Featured products not found
+      </Typography>
+    )
+  }
+  <!-- Partner company Logo cloud -->
+  <PartnerCompanies />
+
+  <Footer />
+</Layout>

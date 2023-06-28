@@ -1,0 +1,24 @@
+---
+import { categoriesList } from "@api/product/categoriesList";
+import Footer from "@components/Footer.astro";
+import Navbar from "@components/Navbar.astro";
+import Products from "@components/Products";
+import Layout from "@layouts/Layout.astro";
+import getProductsFromUrl from '@utils/getProductsFromUrl'
+
+const categoryRes = await categoriesList();
+const categories = categoryRes?.product_categories;
+
+const {params, result} = await getProductsFromUrl(Astro.url.searchParams);
+---
+
+<Layout
+  title="Products"
+  description="StreamDevices - A global platform for local making"
+>
+  <Navbar />
+  <main class="bg-white">
+    <Products categories={categories} productResult={result} client:load queryParams={params} />
+  </main>
+  <Footer />
+</Layout>
