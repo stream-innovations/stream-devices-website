@@ -1,46 +1,46 @@
 export const heroContent = {
   // Heading of the hero section on the home page
   heading: `Discover unique products`,
-  description: `Our mission is to connect you with talented, passionate local manufacturers to help support their small businesses. Shop with us and discover the beauty and quality of locally made products. Start supporting your local community now!`,
+  description: `Our mission is to create a platform that supports Stream Protocol businesses and enables you to discover extraordinary products that embody innovation, craftsmanship, and quality.`,
 };
 
 export const introSection = {
   // Section below hero
-  heading: `A global platform for local manufacturers`,
-  description: `Looking to showcase your unique creativity to a global audience? Our platform offers the perfect solution for local manufacturers to showcase their talents to the world. Join our community and connect with like-minded creatives today.`,
+  heading: `A global platform for manufacturers`,
+  description: `Stream Protocol is not just a marketplace; it's a vibrant community of technology enthusiasts and like-minded individuals. Engage with fellow shoppers, share your experiences, and exchange knowledge through our dedicated forums and social media channels.`,
 };
 
-// partner companies
+// Partner companies
 export const partnerCompanies = {
-  heading: "The world’s most innovative companies use our app",
+  heading: "Empowering the World's Most Innovative Companies",
 };
 
 export const socialLinks = {
   fb: "https://www.facebook.com/",
-  insta: "https://www.instagram.com/",
+  instagram: "https://www.instagram.com/",
   twitter: "https://twitter.com/",
   github: "https://github.com/",
   youtube: "https://youtube.com/",
 };
 
-// blog page
+// Blog page
 export const blogPage = {
-  heading: "Curiosta blog",
-  description: "Learn how to grow your business with our expert advice.",
+  heading: "StreamDevices blog",
+  description: "Your Source for Expert Advice on Business Growth",
 };
 
-// company details
+// Company details
 export const companyInfo = {
-  moto: `Global Innovation, Local Production.`,
-  address: `HD-240, 5th Floor, WeWork Two Horizon Centre, DLF Phase 5, Gurugram, Haryana 122002`,
-  phone: "+91 124 502 5388",
+  moto: `Stream Innovation, Local Production.`,
+  address: `HD-240, 5th Floor`,
+  phone: "+91 123",
 };
 
 // add page titles
 export const pageTitleDesc = {
   home: {
-    title: "Curiosta....",
-    description: "where inovation begines",
+    title: "StreamDevices....",
+    description: "Where Innovation Begins, Endless Possibilities Unfold",
   },
   cart: {
     title: "Cart",
@@ -48,7 +48,7 @@ export const pageTitleDesc = {
   },
   blog: {
     title: "blog",
-    description: "Curiosta blog",
+    description: "StreamDevices blog",
   },
   signup: {
     title: "Create account",

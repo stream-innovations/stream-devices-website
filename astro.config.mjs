@@ -8,13 +8,13 @@ import mdx from "@astrojs/mdx";
 
 // https://astro.build/config
 export default defineConfig({
-  output: "server",
-  site: "https://curiosta.com/",
-  adapter: aws(),
-  integrations: [tailwind(), preact({
-    compat: true
-  }), image(), mdx()],
-  server: {
-    // port: 8000
-  }
+    output: "server",
+    site: "https://streamdevices.shop/",
+    adapter: aws(),
+    integrations: [tailwind(), preact({
+        compat: true
+    }), image(), mdx()],
+    server: {
+        // port: 8000
+    }
 });

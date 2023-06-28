@@ -1,4 +1,6 @@
-# Astro Starter Kit: Minimal
+# StreamDevices website 
+
+## Astro Starter Kit: Minimal
 
 ```
 npm create astro@latest -- --template minimal
