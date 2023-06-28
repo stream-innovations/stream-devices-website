@@ -1,2 +1,3 @@
-# stream-devices-website
+# StreamDevices website
+
 Astro website frontend for StreamDevices
